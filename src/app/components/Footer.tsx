@@ -3,7 +3,9 @@
 import { personalData } from "@/../utils/Data/PersonalData";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+import { SiLeetcode } from "react-icons/si";
 import { Link as ScrollLink } from "react-scroll";
 
 const navItems = [
@@ -104,11 +106,11 @@ const Footer = () => {
               </Link>
 
               <Link
-                href={personalData.Instagram}
+                href={personalData.leetcode}
                 target="_blank"
                 className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:border-red-500 hover:text-red-500 transition-all"
               >
-                <FaInstagram size={20} />
+                <SiLeetcode size={20} />
               </Link>
             </div>
           </div>
