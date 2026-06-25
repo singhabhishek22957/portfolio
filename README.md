@@ -6,7 +6,7 @@ A modern, responsive portfolio website built with **Next.js 15**, **TypeScript**
 
 # 🚀 Live Demo
 
-🔗 **Portfolio:** https://your-portfolio-url.vercel.app
+🔗 **Portfolio:** https://abhishek-singh-rho.vercel.app
 
 ---
 
@@ -223,9 +223,9 @@ http://localhost:3000
 
 # 👨‍💻 Author
 
-## Abhishek Singh
+## Abhishek Kumar Singh
 
-**MCA Graduate (2026)**
+**MCA (2026)**
 
 Full Stack MERN & Next.js Developer
 
