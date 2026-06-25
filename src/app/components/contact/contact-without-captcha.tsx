@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
-import { toast } from "react-toastify";
 import { isValidEmail } from "@/../utils/check-email";
 import { User, Mail, MessageSquare } from "lucide-react";
+import { toast } from "sonner";
 
 const ContactWithoutCaptcha = () => {
 const [input, setInput] = useState({
@@ -72,7 +72,10 @@ try {
     throw new Error(data.error || "Failed to send message");
   }
 
-  toast.success("Message sent successfully!");
+  toast.success("Message Sent Successfully 🎉", {
+  description:
+    "Thank you for contacting me. I'll get back to you within 24 hours.",
+});
 
   setInput({
     name: "",
@@ -86,9 +89,16 @@ try {
   });
 } catch (error: unknown) {
   if (error instanceof Error) {
-    toast.error(error.message);
+    toast.error("Unable to Send Message", {
+  description:
+    error instanceof Error
+      ? error.message
+      : "Something went wrong. Please try again later.",
+});
   } else {
-    toast.error("Something went wrong.");
+    toast.error("Failed to send message", {
+  description: "Please try again later.",
+});
   }
 } finally {
   setIsLoading(false);
